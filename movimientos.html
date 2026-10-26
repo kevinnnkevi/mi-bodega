@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Movimientos | Mi Bodega</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">b.</span>
+      <span>mi bodega<small>control de inventario</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="proveedores.html">Proveedores</a>
+      <a class="active" href="movimientos.html">Movimientos</a>
+    </nav>
+    <span class="top-note">Panel de almacén</span>
+  </header>
+
+  <main class="shell page-shell">
+    <div class="eyebrow">HISTORIAL DE BODEGA</div>
+    <section class="welcome">
+      <div>
+        <h1>Movimientos</h1>
+        <p>Entradas y salidas.</p>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">Regristre la activifad</div><h2>Nuevo movimiento</h2></div>
+      </div>
+
+      <form class="form-grid movement-form" onsubmit="alert('Movimiento guardado (demo)'); return false;">
+        <label>Producto
+          <select required>
+            <option value="" disabled selected>Selecciona un producto</option>
+            <option>Taladro</option>
+            <option>Martillo</option>
+            <option>Destornillador</option>
+            <option>Clavos</option>
+          </select>
+        </label>
+        <label>Tipo
+          <select required>
+            <option>Entrada</option>
+            <option>Salida</option>
+          </select>
+        </label>
+        <label>Cantidad<input type="number" min="1" placeholder="0" required></label>
+        <div class="form-action">
+          <button class="button button-dark" type="submit">Guardar movimiento <span>→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">ÚLTIMOS REGISTROS</div><h2>Actividad reciente</h2></div>
+        <span class="table-note">Más nuevo primero</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Fecha</th><th>Producto</th><th>Tipo</th><th>Cantidad</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="muted">22 oct. 2026</td><td class="item-name">Clavos</td><td><span class="movement-type type-out">↗ Salida</span></td><td>10 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">21 oct. 2026</td><td class="item-name">Martillo</td><td><span class="movement-type type-out">↗ Salida</span></td><td>2 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">20 oct. 2026</td><td class="item-name">Taladro</td><td><span class="movement-type type-in">↙ Entrada</span></td><td>5 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">22 oct. 2026</td><td class="item-name">Pulidora</td><td><span class="movement-type type-out">↗ Salida</span></td><td>10 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">21 oct. 2026</td><td class="item-name">Pinzas</td><td><span class="movement-type type-out">↗ Salida</span></td><td>2 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">20 oct. 2026</td><td class="item-name">Regla</td><td><span class="movement-type type-in">↙ Entrada</span></td><td>5 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">22 oct. 2026</td><td class="item-name">Pernos</td><td><span class="movement-type type-out">↗ Salida</span></td><td>10 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">21 oct. 2026</td><td class="item-name">Cinta</td><td><span class="movement-type type-out">↗ Salida</span></td><td>2 <span class="unit">unid.</span></td></tr>
+            <tr><td class="muted">20 oct. 2026</td><td class="item-name">Cinta metrica</td><td><span class="movement-type type-in">↙ Entrada</span></td><td>5 <span class="unit">unid.</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>Mi Bodega <span>·</span> Hecho para llevar las cuentas claras.</footer>
+  </main>
+</body>
+</html>

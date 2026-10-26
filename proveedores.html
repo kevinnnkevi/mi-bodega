@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Proveedores | Mi Bodega</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">b.</span>
+      <span>mi bodega<small>control de inventario</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a class="active" href="proveedores.html">Proveedores</a>
+      <a href="movimientos.html">Movimientos</a>
+    </nav>
+    <span class="top-note">Panel de almacén</span>
+  </header>
+
+  <main class="shell page-shell">
+    <div class="eyebrow">CONTACTOS</div>
+    <section class="welcome">
+      <div>
+        <h1>Proveedores</h1>
+        <p>Personas y negocios que mantienen tu bodega abastecida.</p>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">NUEVO CONTACTO</div><h2>Agregar proveedor</h2></div>
+      </div>
+
+      <form class="form-grid" onsubmit="alert('Proveedor guardado (demo)'); return false;">
+        <label>Nombre<input type="text" placeholder="Nombre del proveedor" required></label>
+        <label>Empresa<input type="text" placeholder="Nombre comercial"></label>
+        <label>Teléfono<input type="tel" placeholder="55 1234 5678"></label>
+        <label>Correo electrónico<input type="email" placeholder="correo@ejemplo.com"></label>
+        <div class="form-action">
+          <button class="button button-dark" type="submit">Agregar proveedor <span>→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">3 REGISTROS</div><h2>Directorio</h2></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Proveedor</th><th>Empresa</th><th>Teléfono</th><th>Correo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="item-name">Ana López</td><td>Ferretería Central</td><td>55 1234 5678</td><td class="muted">ana@ferreteriacentral.mx</td></tr>
+            <tr><td class="item-name">Carlos Ruiz</td><td>Suministros del Norte</td><td>55 8765 4321</td><td class="muted">carlos@suministros.mx</td></tr>
+            <tr><td class="item-name">María Torres</td><td>Materiales La Obra</td><td>55 2468 1357</td><td class="muted">maria@laobra.mx</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>Mi Bodega <span>·</span> Hecho para llevar las cuentas claras.</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Productos | Mi Bodega</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">b.</span>
+      <span>mi bodega<small>control de inventario</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a class="active" href="productos.html">Productos</a>
+      <a href="proveedores.html">Proveedores</a>
+      <a href="movimientos.html">Movimientos</a>
+    </nav>
+    <span class="top-note">Panel de almacén</span>
+  </header>
+
+  <main class="shell page-shell">
+    <div class="eyebrow">INVENTARIO</div>
+    <section class="Bienvenido">
+      <div>
+        <h1>Productos</h1>
+        <p>Lo que tienes en bodega, claro y al día.</p>
+      </div>
+    </section>
+
+    <section class="panel form-panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">NUEVO REGISTRO</div><h2>Agregar producto</h2></div>
+      </div>
+
+      <form class="form-grid" onsubmit="alert('Producto guardado (demo)'); return false;">
+        <label>Código<input type="text" placeholder="Ej. 005" required></label>
+        <label>Nombre del producto<input type="text" placeholder="Ej. Llave inglesa" required></label>
+       <label>Precio<input type="number" min="0" step="0.01" placeholder="0.00" required></label>
+        <label>Existencias<input type="number" min="0" placeholder="0" required></label>
+        <div class="form-action">
+          <button class="button button-dark" type="submit">Agregar producto <span>→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-head">
+        <div><div class="eyebrow">4 REGISTROS</div><h2>Todos los productos</h2></div>
+        <span class="table-note">Precios</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Código</th><th>Producto</th><th>Precio</th><th>Existencias</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="muted">001</td><td class="item-name">Taladro</td><td>$2,500.00</td><td>8 <span class="unit">unid.</span></td><td><span class="badge badge-ok">Disponible</span></td></tr>
+            <tr><td class="muted">002</td><td class="item-name">Martillo</td><td>$350.00</td><td>15 <span class="unit">unid.</span></td><td><span class="badge badge-ok">Disponible</span></td></tr>
+            <tr><td class="muted">003</td><td class="item-name">Destornillador</td><td>$120.00</td><td>20 <span class="unit">unid.</span></td><td><span class="badge badge-ok">Disponible</span></td></tr>
+            <tr><td class="muted">004</td><td class="item-name">Clavos</td><td>$50.00</td><td>3 <span class="unit">unid.</span></td><td><span class="badge badge-warn">Stock bajo</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>Mi Bodega <span>·</span> Hecho para llevar las cuentas claras.</footer>
+  </main>
+</body>
+</html>
